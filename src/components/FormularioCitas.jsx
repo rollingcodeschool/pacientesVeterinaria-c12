@@ -1,4 +1,6 @@
 import { Form, Button } from "react-bootstrap";
+import GrillaCitas from "./GrillaCitas";
+
 const FormularioCitas = () => {
   return (
     <section>
@@ -42,6 +44,7 @@ const FormularioCitas = () => {
           Agregar nueva cita
         </Button>
       </Form>
+      <GrillaCitas></GrillaCitas>
     </section>
   );
 };
