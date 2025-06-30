@@ -1,6 +1,6 @@
 import { Card, Col, Button } from "react-bootstrap";
 
-const CardCita = ({cita}) => {
+const CardCita = ({cita, borrarCita}) => {
   return (
     <Col>
       <Card>
@@ -11,7 +11,7 @@ const CardCita = ({cita}) => {
             <br/>
             <b>Sintomas:</b> los sintomas de la mascota
           </Card.Text>
-          <Button variant="danger">Borrar</Button>
+          <Button variant="danger" onClick={()=> borrarCita(cita.id)}>Borrar</Button>
         </Card.Body>
       </Card>
     </Col>

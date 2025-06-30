@@ -20,6 +20,12 @@ const {
     reset();
   }
 
+  const borrarCita = (idCita)=>{
+    console.log('estoy en borrar Cita')
+    const citasFiltradas = citas.filter((cita)=> cita.id !== idCita )
+    setCitas(citasFiltradas)
+  }
+
   return (
     <section>
       <Form onSubmit={handleSubmit(crearCita)} className="border p-3 rounded-3 bg-light">
@@ -92,7 +98,7 @@ const {
           Agregar nueva cita
         </Button>
       </Form>
-      <GrillaCitas citas={citas}></GrillaCitas>
+      <GrillaCitas citas={citas} borrarCita={borrarCita}></GrillaCitas>
     </section>
   );
 };
