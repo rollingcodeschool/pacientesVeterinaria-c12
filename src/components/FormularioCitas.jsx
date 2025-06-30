@@ -1,7 +1,8 @@
 import { Form, Button } from "react-bootstrap";
 import GrillaCitas from "./GrillaCitas";
 import { useForm } from "react-hook-form";
-import { use, useState } from "react";
+import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 const FormularioCitas = () => {
 const [citas, setCitas] = useState([])
@@ -13,6 +14,7 @@ const {
   } = useForm()
 
   const crearCita = (datos)=>{
+    datos.id = uuidv4();
     console.log(datos)
     setCitas([...citas,datos])
     reset();
